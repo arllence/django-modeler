@@ -1,0 +1,104 @@
+
+APPLICATION FORM RECEPTION ACKNOWLEDGEMENT/HATI YA KUKIRI UPOKEI WA FOMU YA MAOMBI,
+Main_form,
+File Number,varchar
+Folio Number,varchar
+Form Number,varchar
+Name,varchar
+Address,varchar
+Village,varchar
+Zone,varchar
+ID Number,varchar
+Spouse ID Number,varchar
+Signature (YES/NO),list
+Date,date
+,
+,
+,
+DONE,
+,
+HOUSING SCHEME HANDING OVER FORM,
+Main_form,
+File Number,varchar
+Folio Number,varchar
+,
+Tenant Section,
+Name,varchar
+Date,varchar
+Zone,varchar
+Sector,varchar
+House No.,varchar
+House Type,varchar
+Ballot No.,varchar
+,
+General Observations/Approval Section,
+Contractor Signature (YES/NO),list
+Date,date
+Resident Engineer Signature (YES/NO),list
+Date,date
+Tenant Signature (YES/NO),list
+,
+,
+DONE,
+,
+SOLEMN UNDERTAKING TO VACATE RENTAL HOUSING,
+Main_form,
+File Number,varchar
+Folio Number,varchar
+,
+Tenant Section,
+Name,
+Tenant Purchase House No.,
+Tenant Signature (YES/NO),
+Date,list
+Housing Officer Signature (YES/NO),list
+Date,date
+Rental House No.,
+Estate,
+,
+,
+DONE,
+,
+STATEMENT OF ACCOUNT,
+Main_form,
+File Number,varchar
+Folio Number,varchar
+Account Number,varchar
+Account Name,varchar
+Area,varchar
+Date,date
+,
+,
+DONE,
+,
+DEED OF IDEMNITY,
+File Number,varchar
+Folio Number,varchar
+,
+Parcel Details Section(Add),
+Parcel Type,list
+Plot Number,varchar
+Legal Proprietor,varchar
+,
+DONE,
+,
+PLANS COMMENTS SHEET,
+File Number,varchar
+Folio Number,varchar
+,
+Community Development Section,
+Plot Number,Varchar
+Original Allotte,Varchar
+New Allotee,Varchar
+,
+Survey Section,
+"Survey Status(YES,NO)",list
+"Beacon Certificate Issued(YES,NO)",list
+,
+Technical Section,
+"Plot Status(Infill, Original)",list
+User,varchar
+Authorized Development,varchar
+,
+,
+DONE,

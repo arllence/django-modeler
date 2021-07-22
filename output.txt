@@ -1,0 +1,46 @@
+class PowerOfAttorneyForm(models.Model):
+	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+	file_number = models.CharField(max_length=100)
+	folio_number = models.CharField(max_length=100)
+	property_section_(add_) = JSONField()
+	plot_number = models.CharField(max_length=100)
+	scheme = models.CharField(max_length=100)
+	date = models.DateField()
+	donor_section_-_(add_) = JSONField()
+	name = models.CharField(max_length=100)
+	address = models.CharField(max_length=100)
+	identification_type_(national_id,_passport_number) = models.CharField(max_length=100)
+	identification_number = models.CharField(max_length=100)
+	donee_section_-_(add_) = JSONField()
+	name = models.CharField(max_length=100)
+	address = models.CharField(max_length=100)
+	identification_type_(national_id,_passport_number) = models.CharField(max_length=100)
+	identification_number = models.CharField(max_length=100)
+	power_limited_to_section_-_(add) = JSONField()
+	entry = models.CharField(max_length=100)
+	description = models.CharField(max_length=100)
+	registration_section_-_(add_) = JSONField()
+	registered_date = models.DateField()
+	approved_(yes/no) = models.CharField(max_length=100)
+
+	department = models.ForeignKey(
+		Department,
+		related_name="land_vrb_power_of_attorney_form_department",
+		on_delete=models.CASCADE,
+	)
+
+	document = models.ForeignKey(
+		DocumentUpload,
+		related_name="land_vrb_power_of_attorney_form_document",
+		on_delete=models.CASCADE,
+	)
+
+	def __str__(self):
+		return self.id
+
+	class Meta:
+		db_table = u'"{}"."power_of_attorney_form"'.format(
+			settings.LAND_VRB_DEPT_SCHEMA
+		)
+		
+
