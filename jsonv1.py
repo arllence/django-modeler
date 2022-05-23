@@ -1,6 +1,6 @@
 import csv
 
-filename = "input2.csv"
+filename = "input.csv"
 
 
 def getFieldName(name):
@@ -50,6 +50,7 @@ with open(filename, 'r') as csvfile:
 	print(heads,"\n")
 
 jsons = {}
+all_lists = []
 
 for head in heads:
 	body = data[head]
@@ -70,7 +71,8 @@ for head in heads:
 
 		if field_name != 'main_form':
 			# f.write("\t" + field + "\n")
-			if field_type == 'list':
+			if field_type == 'list' or field_type == 'boolean':
+				all_lists.append(field_name.upper())
 				json_field = {
                     "field_name": field_name,
                     "field_type": "select",
@@ -109,6 +111,13 @@ for head in heads:
 
 
 
-	f.write("\n\n")
-	f.close()
+	f.write("\n\n\n\n\n\n")
+	
+
+f = open("json_output.txt", "a")
+for ilist in all_lists:
+	f.write(ilist + "\n")
+f.close()
+
+
 

@@ -3,11 +3,11 @@ import csv
 filename = "input.csv"
 
 def getFieldType(field_type):
-	varchar = 'models.CharField(max_length=100)'
-	text = 'models.TextField()'
-	number = 'models.IntegerField()'
-	date = 'models.DateField()'
-	section = 'JSONField()'
+	varchar = 'models.CharField(max_length=100,null=True,default=True)'
+	text = 'models.TextField(null=True,default=True)'
+	number = 'models.IntegerField(null=True,default=True)'
+	date = 'models.DateField(null=True,default=True)'
+	section = 'JSONField(null=True,default=True)'
 
 	field_type = field_type.lower()
 
@@ -73,7 +73,7 @@ def getDefaults(name,dept):
 	)""".format(dept,name)
 
 	def_str= """def __str__(self):
-		return self.id"""
+		return self.file_number"""
 
 	meta = """class Meta:
 		db_table = u'"{}"."{}"'.format(
@@ -114,7 +114,7 @@ with open(filename, 'r') as csvfile:
 
 for head in heads:
 	body = data[head]
-	dept = "land_vrb"
+	dept = "land_registration"
 	department, document, def_str, meta = getDefaults(head,dept)
 	head = getModelName(head)
 	head = "class " + head + ":"

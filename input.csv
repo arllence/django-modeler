@@ -1,0 +1,32 @@
+TRANSFER TO PERSONAL REPRESENTATIVE AS EXECUTORS MAIN,
+Main_form ,
+File Number,varchar
+Folio Number,text
+Property_section,
+"Title Numbering Type (GLA, IR, BLOCK, IRN)",list
+Title Number,varchar
+"Area Units (Square Feet, Acres, Hectares, Square meters)",integer
+Share Ratio,integer
+"Land Registrar's Signature(Yes,No)",list
+Registered Date,date
+Transferee_section ,
+Organization Name,varchar
+Organization/Company Registration Number,varchar
+Company Pin,varchar
+Name,varchar
+"Identification Type(National ID, Passport)(National ID, Passport)",list
+Identification Number,varchar
+address,varchar
+Transferor_section ,
+Organization Name,varchar
+Organization/Company Registration Number,varchar
+Company Pin,varchar
+Name,varchar
+"Identification Type(National ID, Passport)(National ID, Passport)",list
+Identification Number,varchar
+address,varchar
+Entry Number,varchar
+Registered Date,date
+,
+,
+DONE,
